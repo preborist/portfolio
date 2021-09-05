@@ -33,6 +33,7 @@ export default function EducationCard({school}) {
             <h5 className="education-text-school">{school.schoolName}</h5>
 
             <div className="education-text-details">
+              <p className="education-text-desc">{school.desc}</p>
               <h5
                 className={
                   isDark
@@ -49,7 +50,7 @@ export default function EducationCard({school}) {
               >
                 {school.duration}
               </p>
-              <p className="education-text-desc">{school.desc}</p>
+
               <div className="education-text-bullets">
                 <ul>
                   <GetDescBullets descBullets={school.descBullets} />

@@ -14,7 +14,7 @@ const greeting = {
   username: "Serhii Koziuba",
   title: "Hi all, I'm Serhii",
   subTitle: emoji(
-    "A passionate Junior Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs and some other cool libraries and frameworks."
+    "A passionate Junior Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nextjs / Nodejs and some other cool libraries and frameworks."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1Ydajd-F-MJOz7kLPOdd1Pl8XpbRTxhlr/view?usp=sharing",
@@ -36,15 +36,12 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "CRAZY FRONT-END DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
   skills: [
     emoji(
       "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
-    )
+    emoji("⚡ Develop back-end with NoSQL database")
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -95,23 +92,37 @@ const educationInfo = {
   schools: [
     {
       schoolName:
-        "National Technical University of Ukraine “Igor Sikorsky Kyiv Polytechnic Institute”",
+        "National Technical University of Ukraine “Igor Sikorsky Kyiv Polytechnic Institute",
       logo: require("./assets/images/kpi.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
+      subHeader: "Specialist degree – Electronic Engineer",
+      duration: "September 2008 - February 2012",
+      desc: "Faculty of Instrumentation Engineering. Department of Scientific, Analytical and Ecological Devices and Systems"
+    },
+    {
+      schoolName: "IT COURSES GOIT",
+      logo: require("./assets/images/goit.png"),
+      subHeader: "FULL STACK DEVELOPER",
+      duration: "June 2020 - July 2021",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "HTML + CSS + 3 projects (2 personal and 1 team project)",
+        "Javascript + 1 team project",
+        "React JS + 1 personal project",
+        "Back-End + 1 team project"
       ]
     },
     {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+      schoolName: "QATestLab training center",
+      logo: require("./assets/images/tc_logo.png"),
+      subHeader: "Software Testing",
+      duration: "September 2012 - June 2013",
+      descBullets: [
+        "WEB-projects testing",
+        "Functional Testing Approaches",
+        "Software testing life cycle",
+        "Test design. Test cases",
+        "Mobile applications testing",
+        "Game testing"
+      ]
     }
   ]
 };
@@ -143,29 +154,50 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "Head of Lighting Engineering division",
+      company: "VD MAIS",
+      companylogo: require("./assets/images/vdmais_logo_ru.svg"),
+      companyLink: "https://vdmais.ua/",
+      date: "Jan 2020 – Present",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Increased sales of our division by 50%.",
+        "Responsible for negotiations with customers and foreign suppliers.",
+        "Trained new employees.",
+        "Used SQL queries to create price lists and analyze sales.",
+        "Tested online payment system of the company's website."
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Product Manager of Switching Power Supplies",
+      company: "VD MAIS",
+      companylogo: require("./assets/images/vdmais_logo_ru.svg"),
+      companyLink: "https://vdmais.ua/",
+      date: "Dec 2018 – Dec 2019",
+      descBullets: [
+        "Promoted Switching Power Supplies brand in Ukraine.",
+        "Responsible for negotiations with customers, suppliers."
+      ]
     },
     {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Sales Engineer",
+      company: "VD MAIS",
+      companylogo: require("./assets/images/vdmais_logo_ru.svg"),
+      companyLink: "https://vdmais.ua/",
+      date: "Nov 2011 – Nov 2018",
+      descBullets: [
+        "Added new brand in company line card, which allowed to increase sales of our department by 20-35% every year.",
+        "Prepared and conducted technical seminars and trainings. Represented the company at local and international exhibitions."
+      ]
+    },
+    {
+      role: "Manager of Foreign-Economic Activity",
+      company: "VD MAIS",
+      companylogo: require("./assets/images/vdmais_logo_ru.svg"),
+      companyLink: "https://vdmais.ua/",
+      date: "Feb 2011 – Nov 2011",
+      descBullets: [
+        "Responsible for logistics, foreign economic activities with suppliers."
+      ]
     }
   ]
 };
@@ -182,29 +214,19 @@ const openSource = {
 
 const bigProjects = {
   title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  subtitle: "SOME PROJECT HWERE I HELPED TO CREATE THEIR TECH",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/chart.png"),
+      projectName: "Planner",
+      projectDesc:
+        "mobile-first adaptive web planner with authorization to compare your spent working hours with the planned working hours on real time chart.",
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://saayahealth.com/"
+          url: "https://dreamteam-planner.netlify.app/"
         }
         //  you can add extra buttons here.
-      ]
-    },
-    {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://nextu.se/"
-        }
       ]
     }
   ],
@@ -266,7 +288,7 @@ const achievementSection = {
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Blogs Section
@@ -290,7 +312,7 @@ const blogSection = {
         "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
@@ -309,7 +331,7 @@ const talkSection = {
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
@@ -322,22 +344,22 @@ const podcastSection = {
   podcast: [
     "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-3243454077",
-  email_address: "saadpasta70@gmail.com"
+  number: "+38(093)775-22-16",
+  email_address: "preborist@gmail.com"
 };
 
 // Twitter Section
 
 const twitterDetails = {
   userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  display: false // Set true to display this section, defaults to false
 };
 
 export {
